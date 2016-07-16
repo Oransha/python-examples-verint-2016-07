@@ -1,6 +1,6 @@
-"""
-Write a function that takes minlen and
-a list of words, and returns only the words
-longer than minlen
-"""
+def my_words(number, *words):
+    for word in words:
+        if len(word) > number:
+            print word
 
+my_words(3, 'hit', 'me', 'baby', 'one', 'more', 'time')
