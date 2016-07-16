@@ -1,7 +1,5 @@
-"""
-Write a function that takes two arguments: 
-    A string
-    And a number
-If wrong types were passed in, raise an exception
-"""
+def type_check(number=1, string=None):
+    if type(number) != int or type(string) != str:
+        raise TypeError("you insert wrong type")
 
+type_check(2,"f")
