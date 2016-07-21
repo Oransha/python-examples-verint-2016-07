@@ -1,12 +1,12 @@
-"""
-Write a program that reads data
-from property files.
-Each line in the file can either be:
-    An empty line
-    A comment line (Start with #)
-    A property line (of the form key = value)
+import sys
+import re
+file = sys.argv[1]
+user_input = raw_input("please enter your input:")
 
-Write a program that takes a property file name and key
-as command line arguments and prints the requested value
-"""
+
+with open(file,'r') as f:
+    for line in f:
+        if user_input in line:
+            print re.sub(r'(\w+)\s?=','', line)
+
 
