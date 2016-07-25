@@ -20,7 +20,7 @@ def underline(text1):
         print text1, "not have big letter"
     else:
         lower = re.sub('([A-Z])',
-        lambda n: '_' + n.group(0).lower()
+        lambda m: '_' + m.group(0).lower()
         , text1) 
         return lower
 
